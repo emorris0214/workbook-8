@@ -23,10 +23,11 @@ public class MainP2 {
         // 5. Execution of query
         ResultSet results = statement.executeQuery();
 
+        // Formatting
         System.out.printf("%-4s %-25s %7s %6s%n", "Id", "Name", "Price", "Stock");
         System.out.println("---- ------------------------- ------- ------");
 
-        // Processing the results
+        // 6. Processing the results
         while (results.next()) {
             int id = results.getInt("ProductID");
             String name = results.getString("ProductName");
@@ -34,7 +35,7 @@ public class MainP2 {
             int stock = results.getInt("UnitsInStock");
             System.out.printf("%-4d %-25s %7.2f %6d%n", id, name, price, stock);
         }
-        // 3. Close the connection
+        // 7. Close the connection
         connection.close();
     }
 }
