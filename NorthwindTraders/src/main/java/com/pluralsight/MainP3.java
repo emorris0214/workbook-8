@@ -109,7 +109,7 @@ public class MainP3 {
             }
         }
     }
-    
+
     private static void displayAllCustomers() {
         Connection connection = null;
         PreparedStatement statement = null;
